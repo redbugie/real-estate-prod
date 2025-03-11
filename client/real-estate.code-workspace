@@ -1,0 +1,12 @@
+{
+	"folders": [
+		{
+			"name": "real-estate-prod-master",
+			"path": "../../../Downloads/real-estate-prod-master"
+		},
+		{
+			"name": "client",
+			"path": "."
+		}
+	]
+}
