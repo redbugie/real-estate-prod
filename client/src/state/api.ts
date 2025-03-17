@@ -76,10 +76,7 @@ export const api = createApi({
     }),
 
     // property related endpoints
-    getProperties: build.query<
-      Property[],
-      Partial<FiltersState> & { favoriteIds?: number[] }
-    >({
+    getProperties: build.query<Property[], Partial<FiltersState> & { favoriteIds?: number[] }>({
       query: (filters) => {
         const params = cleanParams({
           location: filters.location,

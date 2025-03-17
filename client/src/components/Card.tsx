@@ -18,8 +18,7 @@ const Card = ({
     <div className="bg-white rounded-xl overflow-hidden shadow-lg w-full mb-5">
       <div className="relative">
         <div className="w-full h-48 relative">
-          <Image
-            src={imgSrc}
+          <Image src={imgSrc}
             alt={property.name}
             fill
             className="object-cover"

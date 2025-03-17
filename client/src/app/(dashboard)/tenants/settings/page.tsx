@@ -1,14 +1,12 @@
 "use client";
 
 import SettingsForm from "@/components/SettingsForm";
-import {
-  useGetAuthUserQuery,
-  useUpdateTenantSettingsMutation,
-} from "@/state/api";
+import { useGetAuthUserQuery, useUpdateTenantSettingsMutation } from "@/state/api";
 import React from "react";
 
 const TenantSettings = () => {
   const { data: authUser, isLoading } = useGetAuthUserQuery();
+  console.log("authUser:", authUser);
   const [updateTenant] = useUpdateTenantSettingsMutation();
 
   if (isLoading) return <>Loading...</>;
@@ -27,7 +25,7 @@ const TenantSettings = () => {
   };
 
   return (
-    <SettingsForm
+    <SettingsForm 
       initialData={initialData}
       onSubmit={handleSubmit}
       userType="tenant"
